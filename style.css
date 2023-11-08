@@ -1,0 +1,43 @@
+:root {
+    --num-cells-per-row: 10;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: rgb(36, 36, 36);
+    color: white;
+    font-family: sans-serif;
+}
+
+#grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    height: 600px;
+    width: 600px;
+}
+
+.square {
+    border: solid 1px;
+    height: calc(100% / var(--num-cells-per-row));
+    width: calc(100% / var(--num-cells-per-row));
+}
+
+.highlight-green {
+    background: green;
+}
+
+.highlight-red {
+    background: red;
+}
+
+.bomb {
+    border: solid 1px;
+    height: calc(100% / var(--num-cells-per-row));
+    width: calc(100% / var(--num-cells-per-row));
+}
