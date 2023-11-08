@@ -10,7 +10,7 @@ document.getElementById("start").addEventListener("click", function () {
 
 function creaGriglia() {
 
-    bombeArray = creaBombeArray()
+    bombeArray = creaBombeArray();
 
     clearGrid();
 
@@ -55,9 +55,8 @@ function creaQuadrato(numero) {
             //versione abbreviata
             cella.classList.toggle("highlight-red");
 
-            alert("You lost!")
-
-            location.reload()
+            showbombs();
+            location.reload();
 
         });
 
@@ -100,4 +99,12 @@ function creaBombeArray() {
     }
     return randomNumbers
 
+}
+
+function showbombs() {
+
+    // document.querySelectorAll(".bomb");
+    let bombs = document.querySelectorAll(".bomb");
+    bombs.forEach((bombDiv) => bombDiv.classList.add("highlight-red"));
+    alert("You lost!");
 }
